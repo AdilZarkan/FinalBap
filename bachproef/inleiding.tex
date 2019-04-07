@@ -5,32 +5,53 @@
 \chapter{\IfLanguageName{dutch}{Inleiding}{Introduction}}
 \label{ch:inleiding}
 
-De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te begrijpen en in te zien waarom de onderzoeksvraag de moeite waard is om te onderzoeken. In de inleiding ga je literatuurverwijzingen beperken, zodat de tekst vlot leesbaar blijft. Je kan de inleiding verder onderverdelen in secties als dit de tekst verduidelijkt. Zaken die aan bod kunnen komen in de inleiding~\autocite{Pollefliet2011}:
+%De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te begrijpen en in te zien waarom de onderzoeksvraag de moeite waard is om te onderzoeken. In de inleiding ga je literatuurverwijzingen beperken, zodat de tekst vlot leesbaar blijft. Je kan de inleiding verder onderverdelen in secties als dit de tekst verduidelijkt. Zaken die aan bod kunnen komen in de inleiding~\autocite{Pollefliet2011}:
 
-\begin{itemize}
-  \item context, achtergrond
-  \item afbakenen van het onderwerp
-  \item verantwoording van het onderwerp, methodologie
-  \item probleemstelling
-  \item onderzoeksdoelstelling
-  \item onderzoeksvraag
-  \item \ldots
-\end{itemize}
+%\begin{itemize}
+%  \item context, achtergrond
+% \item afbakenen van het onderwerp geen optimalisatie bespreken
+% \item verantwoording van het onderwerp, methodologie
+%\item probleemstelling
+%\item onderzoeksdoelstelling
+%\item onderzoeksvraag
+%\end{itemize}
 
 \section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}
 \label{sec:probleemstelling}
 
-Uit je probleemstelling moet duidelijk zijn dat je onderzoek een meerwaarde heeft voor een concrete doelgroep. De doelgroep moet goed gedefinieerd en afgelijnd zijn. Doelgroepen als ``bedrijven,'' ``KMO's,'' systeembeheerders, enz.~zijn nog te vaag. Als je een lijstje kan maken van de personen/organisaties die een meerwaarde zullen vinden in deze bachelorproef (dit is eigenlijk je steekproefkader), dan is dat een indicatie dat de doelgroep goed gedefinieerd is. Dit kan een enkel bedrijf zijn of zelfs één persoon (je co-promotor/opdrachtgever).
+\subsubsection{Context en probleemstelling}
+Wanneer men naar hedendaagse bedrijfsprocessen, en hun geautomatiseerde systemen kijkt, merkt men vaak éen of meerdere processen op die zéér moeilijk te optimaliseren zijn. Een schoolvoorbeeld hiervan, volgens Delaware althans, is data-input. Binnen de Microsoft Dynamics afdeling merkt men op dat er een zich een trend voordoet van processen die mits het nodige maatwerk prima optimaliseerbaar zijn, behalve de data-input. Laat dit nu net in veel gevallen het vertrekpunt zijn van courante user stories. \textcite{TimeXtender2019} stelt manuele data input bovendien zelfs gelijk aan 'errors' en verlies van tijd.
+
+\subsubsection{Scope van het onderzoek}
+Concreet werd de Job card device-module binnen Microsoft Dynamics 365 FO door Delaware gekozen als te optimaliseren module. Deze module bevat namelijk een aantal operaties, die op vlak van data-input relatief eenvoudig zijn. Echter is het inputten hiervan nog niet voldoende geoptimaliseerd naar de hun mening. Het onderzoeken van de specifieke inefficiënties binnen het data input proces reikt buiten de scope van dit onderzoek en zal daarom niet aan bod komen. Ook zal er geen vergelijkende studie worden gemaakt tussen verschillende chatbots en hun mogelijkheden, omdat de opdrachtgever (Delaware) gekozen heeft voor het Microsoft Bot Framework. 
+
+\subsubsection{Onderzoeksvraag}
+De onderzoeksvraag is daarom om te onderzoeken of deze operaties automatiseerbaar zijn aan de hand van een chatbot (a), en in welke mate het Microsoft Bot Framework hier klaar voor is (b). De keuze voor het Microsoft Bot Framework was een voorwaarde van de opdrachtgever, omdat zij, als Gold Certified Microsoft Partner (\textcite{Delaware2009}), sterke expertise willen ontwikkelen in zaken buiten D365FO binnen het Microsoft ecosysteem. Ook biedt het framework out of the box een aantal zaken aan, zoals Language Interpreting, etc. die het technische aspect van de Chatbot voor hun rekening nemen, daar dit uit de scope reikt van de Dynamics afdeling. Ook het feit dat dit framework via Azure werkt, is een groot pluspunt aangezien de authenticatie van Dynamics 365FO via Azure Active Directory dient te verlopen. 
+
+
+%Uit je probleemstelling moet duidelijk zijn dat je onderzoek een meerwaarde heeft voor een concrete doelgroep. De doelgroep moet goed gedefinieerd en afgelijnd zijn. Doelgroepen als ``bedrijven,'' ``KMO's,'' systeembeheerders, enz.~zijn nog te vaag. Als je een lijstje kan maken van de personen/organisaties die een meerwaarde zullen vinden in deze bachelorproef (dit is eigenlijk je steekproefkader), dan is dat een indicatie dat de doelgroep goed gedefinieerd is. Dit kan een enkel bedrijf zijn of zelfs één persoon (je co-promotor/opdrachtgever).
+
+stakeholders:
+\begin{itemize}
+    \item Delaware
+    \item Microsoft 
+    \item Klanten en partners buiten delaware in het D365FO ecosysteem \item Microsoft Bot Framework
+\end{itemize}
 
 \section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}
 \label{sec:onderzoeksvraag}
+Zorgt het optimaliseren van bepaalde data-input processen binnen Microsoft Dynamics 365 for Finance and Operations door middel van een chatbot geïmplementeerd in het Microsoft Bot Framework voor verhoogde efficiëntie, en is het framework hier klaar voor? 
 
-Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
+%Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
+
+Het is belangrijk om het onderzoek in 2 delen op te splitsen. Enerzijds Zal er een P.o.C. gemaakt worden om te testen of het haalbaar is om de Job card device module deels te vervangen door een chatbot-applicatie binnen het MS Bot Framework. Vervolgens zal er ook een advies gedaan worden omtrent de maturiteit van het framework, en de mogelijkheden binnen MS D365FO. 
 
 \section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}
 \label{sec:onderzoeksdoelstelling}
 
-Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor succes? Beschrijf die zo concreet mogelijk. Gaat het bv. om een proof-of-concept, een prototype, een verslag met aanbevelingen, een vergelijkende studie, enz.
+De verwachting is dat er een P.o.C zal kunnen worden gemaakt die kan communiceren met D365FO. Een eerste criteria voor succes is de mate waarin functionaliteiten die ingebakken zijn in D365FO beschikbaar kunnen worden gesteld aan de chatbot-applicatie. Parameters om dit op te meten zullen implementatietijd en de tijdswinst (of verlies) voor de eindgebruiker. Vervolgens is ook de maturiteit van het framework een onderzoeksonderwerp. Dit is moeilijk meetbaar, daarom zal het doorheen heel dit werk besproken worden, om uiteindelijk een eindadvies te kunnen formuleren. 
+
+%Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor succes? Beschrijf die zo concreet mogelijk. Gaat het bv. om een proof of concept, een prototype, een verslag met aanbevelingen, een vergelijkende studie, enz.
 
 \section{\IfLanguageName{dutch}{Opzet van deze bachelorproef}{Structure of this bachelor thesis}}
 \label{sec:opzet-bachelorproef}
