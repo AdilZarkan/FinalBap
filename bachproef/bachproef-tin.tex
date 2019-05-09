@@ -6,12 +6,13 @@
 \documentclass{bachproef-tin}
 
 \usepackage{hogent-thesis-titlepage} % Titelpagina conform aan HOGENT huisstijl
+\usepackage{float}
 
 %%---------- Documenteigenschappen ---------------------------------------------
 % TODO: Vul dit aan met je eigen info:
 
 % De titel van het rapport/bachelorproef
-\title{zorgt het optimaliseren van bepaalde data-input processen binnen Microsoft Dynamics 365 for Finance and Operations door middel van een chatbot geïmplementeerd in het Microsoft Bot Framework voor verhoogde efficiëntie, en is het framework hier klaar voor?}
+\title{Kwalitatief onderzoek naar integratiemogelijkheden tussen het Microsoft Bot Framework en Microsoft Dynamics 365 for Finance and Operations}
 
 % Je eigen naam
 \author{Adil Zarkan}
@@ -26,7 +27,7 @@
 % Indien je bachelorproef in opdracht van/in samenwerking met een bedrijf of
 % externe organisatie geschreven is, geef je hier de naam. Zoniet laat je dit
 % zoals het is.
-\instelling{Delaware}
+\instelling{delaware}
 
 % Academiejaar
 \academiejaar{2018-2019}
@@ -74,7 +75,13 @@
     % De korte beschrijving wordt gebruikt voor deze lijst, de uitgebreide staat bij
     % de figuur of tabel zelf.
     
+
+
+    \graphicspath{ {img/} }
+
+    
     \listoffigures
+    
     \listoftables
     
     % Als je een lijst van afkortingen of termen wil toevoegen, dan hoort die
@@ -92,6 +99,8 @@
     \input{inleiding}
     \input{standvanzaken}
     \input{stakeholders}
+    \input{functioneleanalyse}
+    \input{technischeanalyse}
     \input{methodologie}
     
     % Voeg hier je eigen hoofdstukken toe die de ``corpus'' van je bachelorproef
