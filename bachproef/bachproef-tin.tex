@@ -5,14 +5,23 @@
 
 \documentclass{bachproef-tin}
 
+
+
 \usepackage{hogent-thesis-titlepage} % Titelpagina conform aan HOGENT huisstijl
+\usepackage{lipsum}
+\usepackage{biblatex}
 \usepackage{float}
+\usepackage{pdfpages}
+\usepackage{epigraph}
+\usepackage{titlesec}
+ 
+\bibliography{bachproef-tin.bib}{}
 
 %%---------- Documenteigenschappen ---------------------------------------------
 % TODO: Vul dit aan met je eigen info:
 
 % De titel van het rapport/bachelorproef
-\title{Kwalitatief onderzoek naar integratiemogelijkheden tussen het Microsoft Bot Framework en Microsoft Dynamics 365 for Finance and Operations}
+\title{Is het integreren van het MS Bot Framework binnen Dynamics 365FO mogelijk (a), en is dit nuttig (b)? }
 
 % Je eigen naam
 \author{Adil Zarkan}
@@ -139,7 +148,21 @@
     %%---------- Andere bijlagen --------------------------------------------------
     % TODO: Voeg hier eventuele andere bijlagen toe
     %\input{...}
+    \chapter{Chatbot aanmaken en beheren}
+    In deze guide vindt men een handleiding terug voor het aanmaken van een nieuwe chatbot in het Microsoft Bot Framework SDK 4. Verder zal deze guide ook dieper in detail gaan wat betreft verwijzingen naar services, resources in Azure etc. 
+    \includepdf[pages= -, offset=0 0]{bijlagen/ap1NieuweBot.pdf}
     
+    \chapter{LUIS instantie aanmaken en beheren}
+    Deze guide zal een walk-through behandelen van het aanmaken van een nieuwe LUIS instantie. Luis, dat een afkorting is voor Language Understanding and Interpreting Service, heeft immers zijn eigen portaal waarom diverse acties kunnen worden uitgevoerd. Deze worden kort toegelicht. 
+    \includepdf[pages= -, offset=0 0]{bijlagen/ap2Luis.pdf}
+    
+    \chapter{Custom services in D365FO}
+    In deze handleiding wordt geïllustreerd hoe een verbinding met Microsoft Dynamics 365 for Finance and Operations tot stand gebracht kan worden. Ook wordt er toegelicht hoe men dan een eigen service beschikbaar kan stellen naar de buitenwereld. 
+    \includepdf[pages= -, offset=0 0]{bijlagen/ap3CustomServices.pdf}
+    
+    \chapter{Onderzoeksresultaten}
+    Om onderzoeksvraag b te beoordelen werd er een bevraging opgenomen. De resultaten kan u hier raadplegen. 
+    \includepdf[pages= -, offset=0 0]{bijlagen/onderzoeksresultaten.pdf}
     %%---------- Referentielijst --------------------------------------------------
     
     \printbibliography[heading=bibintoc]

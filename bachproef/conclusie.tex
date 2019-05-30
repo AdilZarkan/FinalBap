@@ -5,6 +5,41 @@
 \chapter{Conclusie}
 \label{ch:conclusie}
 
+\section{Besluit}
+ De onderzoeksvraag voor dit onderzoek bestaat uit 2 deelvragen
+ \begin{itemize}
+     \item (a) Is het MS Bot Framework matuur genoeg om business processen binnen MS Dynamics 365FO te automatiseren? 
+     \item (b) Is het implementeren van dergelijke chatbots nuttig voor D365FO? 
+ \end{itemize}
+
+Wanneer we de eerste onderzoeksvraag gaan beoordelen is het antwoord hierop positief. Er werd immers een werkende chatbot gemaakt (POC) die kon verbinden met Dynamics, en kon communiceren in 2 richtingen. Zo is er gelukt om CRUD-operaties uit te voeren vanuit de bot naar D365FO. De bot werkt met NLP, en kan dus worden beschouwd als een volwaardige chatbot. Wat wel een pijnpunt is gebleken bij dit onderzoek, is support van Microsoft zelf. In de subsectie VUL IN staat immers beschreven welke hordes zich voordeden, en in welke mate Microsoft hierin een rol speelde. 
+
+Er moet dus een kanttekening geplaatst worden bij de woordkeuze matuur, aangezien de bot hier nog lichtjes tekortschiet. Al kan men wel gerust zijn dat Software Development Kit 4 van het MS Bot Framework, waarin deze bot werd ontwikkeld, matuur genoeg is om ingezet te worden. Alleen is het soms zoeken waarom welke fouten zich wanneer voordoen. 
+
+Wat betreft de tweede onderzoeksvraag is het antwoord minder positief. Het implementeren van dergelijke chatbot kan nuttig zijn, maar bij MS Dynamics 365 kan de implementatie complexer zijn dan wat verwacht zou worden. Zo ligt veel van de logica in D365FO verspreid over het systeem. Dit zorgt er voor dat men al een behoorlijke kennis van Dynamics moet hebben om dit op een acceptabele termijn te kunnen realiseren. Een expert zijn in D365FO is al niet vanzelfsprekend, dus laat staan een expert D365FO met kennis van het MS Bot Framework. 
+
+
+\section{Aanbevelingen}
+\subsection{Voor welke systemen?}
+Ideaal zou zijn dat bij het funderingssysteem (dynamics in dit onderzoek) reeds een soort van domaincontroller gedefinieerd is. Hiermee wordt bedoeld: een verzamelplaats voor alle  funtionaliteiten van een systeem(onderdeel). Dit zorgt er immers voor dat er reeds een entry point is voor binnenkomende requests vanuit de chatbot. Dan moeten deze enkel de juiste parameters voorzien indien nodig, en kunnen ze zo op dezelfde manier interageren met het systeem als voordien. 
+
+Dynamics daarentegen gebruikt veel code die `hard-coded' in de formulieren staat. Gevolg: als men deze code elders wenst te gebruiken (buiten formulieren, bvb. voor een chatbot), dan moet al die business logica gekopieerd worden naar een andere plaats zodat de bot die kan gebruiken. Dit is redundant, en indien in een latere fase de business logica verandert, moet men hem op minimaal twee plaatsen aanpassen.
+
+Het gebruik van chatbots, en third-party apps in het algemeen, voor optimalisaties binnen Dynamics 365FO is dus mogelijk maar de ontwikkelaar moet zeker rekening houden met een aanzienlijke overhead. 
+
+Verder zijn alle systemen die requests van- en naar een ander systeem zoals D365FO ondersteunen te optimaliseren aan de hand van een MS Bot chatbot. 
+
+\subsection{Voor welke toepassingen?}
+Dit onderzoek werd gedaan om te bekijken of diverse en complexe data inputting taken adhv een chatbot kunnen worden geoptimaliseerd. Dit is mogelijk, maar zal niet noodzakelijk een verhoogde efficiëntie teweeg brengen. Echter zijn de mogelijkheden voor andere applicaties vrijwel onbeperkt. 
+
+Zo is het framework heel sterk in informatieweergave (adaptive cards). Vrijwel alle soorten data kunnen op een gestructureerde manier worden weergegeven. Dit zorgt voor een grote bruikbaarheid binnen andere business cases, bijvoorbeeld bij een case waarbij productiemedewerkers complexe stappen (evt. op maat) moeten doorlopen om een goed te produceren. Zo kunnen ze steeds op een snelle en handige manier nodige info raaplegen vanuit het systeem. 
+
+Ook mag men niet verwaarlozen hoe sterk de NLP-engine LUIS is. Deze is zeer sterk in het snel interpreteren van natuurlijke tekst, en dankzij de geïntegreerde machine learning zal het model enkel verbeteren in functie van de tijd. Zo kan een chatbot gebouwd worden als een soort van meta-applicatie. Stel bijvoorbeeld dat een bedrijf interne softwaremodules heeft voor zijn medewerkers. Bijvoorbeeld een voor het ingeven van hun onkosten, een voor het inchekken, een voor afwezigheid te melden, enzovoort. Een bot van het MS Bot framework kan dan perfect dienen als een soort van meta-applicatie. De gebruiker zegr wat hij wil doen, en de bot stuurt de gebruiker juist door. Dan kan er nog overwogen worden om voor die afzonderlijke apps formulieren aan te maken in de bot zelf om de integratie zo volledig te doen. Ook kan er doorverwezen worden naar de juiste applicatie. Heel veel mogelijkheden dus. 
+
+
+
+
+
 % TODO: Trek een duidelijke conclusie, in de vorm van een antwoord op de
 % onderzoeksvra(a)g(en). Wat was jouw bijdrage aan het onderzoeksdomein en
 % hoe biedt dit meerwaarde aan het vakgebied/doelgroep? 

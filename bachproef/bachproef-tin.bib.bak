@@ -140,10 +140,4 @@
   year    = {2009},
 }
 
-@Article{RizkyDharana2017,
-  author = {Rizky Dharana, MeidinaFatima, W. AwadAhmed Al-Anesi},
-  title  = {Artificial Intelligence and Digital Assistance Integration into ERP Systems},
-  year   = {2017},
-}
-
 @Comment{jabref-meta: databaseType:biblatex;}

@@ -19,7 +19,7 @@
 \end{minipage}
 \end{figure}
     
-Dit onderzoek zal zich toespitsen op de Job Card Device module binnen D365FO. Op bovenstaande figuren ziet men screenshots uit het D365FO dasboard. Eens ingelogd ziet een gebruiker deze schermen, aangepast voor hem. Zo zal een productiemedewerker bijvoorbeeld aanzienlijk minder informatie beschikbaar hebben. De module Personnel Management is voor hem bijvoorbeeld niet van toepassing en bijgevolg zal de productiemedewerker deze niet zien. Dit geldt ook voor andere irrelevante modules. 
+Dit onderzoek zal zich toespitsen op de Job Card Device module binnen D365FO. Op bovenstaande figuren ziet men screenshots uit het D365FO dasboard. Eens ingelogd ziet een gebruiker deze schermen, aangepast voor hem. Zo zal een productiemedewerker bijvoorbeeld aanzienlijk minder informatie beschikbaar hebben. De module Personnel Management is voor hem bijvoorbeeld niet van toepassing en bijgevolg zal de productiemedewerker deze niet zien. Dit geldt ook voor andere irrelevante modules en voor afzonderlijke menupunten binnen de schermen. Een productiemederwerker gaat bijvoorbeeld op een bepaald scherm 2 knoppen hebben, terwijl een manager er 20 gaat hebben.
 
 Eens de gebruiker heeft genavigeerd naar de Production Control module zal hij kunnen kiezen voor de job card Device module. Deze module zal, gelijkaardig aan de chatbot, eerst vragen om in te loggen met zijn badgeID (zie onderstaand). Dit omdat het niet mogelijk (mag zijn) is om acties uit te voeren binnen de job card Device zonder ingelogd te zijn. 
 
@@ -48,7 +48,7 @@ Bij het onderzoek werd eerst een functionele analyse gemaakt op maat van het beo
 \end{figure}
 
 Enkele belangrijke opmerkingen: 
-Het linkerdeel van het BPM? omvat must-have 5 (zie functionele requirements hieronder). Van zodra deze stap voldaan is kan de gebruiker acties uitvoeren in de chatbot, en niet eerder. Deze stap zal dus recurrent voorkomen bij alle functionaliteiten van de bot.
+Het linkerdeel van het BPMN omvat must-have 5 (zie functionele requirements hieronder). Van zodra deze stap voldaan is kan de gebruiker acties uitvoeren in de chatbot, en niet eerder. Deze stap zal dus recurrent voorkomen bij alle functionaliteiten van de bot.
 
 Verder zullen er er ook nog andere functionaliteiten in zitten die niet in het BPMN gedefinieerd zijn. Voorbeelden hiervan zijn nice to haves 3 en 4. Aangezien de flows voor deze functionaliteiten uit zéér weinig stappen bestaan, en dus in enige mate triviaal zijn. Daarom werd het opstellen van flows voor deze stappen als buiten de scope van dit onderzoek beschouwd. 
 
@@ -59,7 +59,6 @@ Must haves:
     \item Er wordt een proof-of-concept gebouwd in het Microsoft Bot Framework. 
     \item Bovengenoemde bot gebruikt LUIS voor het interpreteren van natuurlijke zinnen naar commando's. 
     \item Ook moet de bot gepaste CRUD operaties kunnen uitvoeren in D365FO.
-    \item Aan de hand van de MS Bot Connector Service moet de bot ook gehost kunnen worden op Azure en op Webchat. 
     \item De gebruiker kan inloggen adhv een badgeID (zonder deze badgeID kan de gebruiker niks doen. Validatie: badgeID bestaat in D365FO.)
     \item Eens ingelogd kan de gebruiker een aantal acties beginnen die voor hem van toepassing zijn:  
     \subitem De gebruiker kan een productieorder bekijken (titel, hoeveelheid en productieordernummer).
